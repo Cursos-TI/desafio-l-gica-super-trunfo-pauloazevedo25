@@ -34,9 +34,11 @@ int main() {
     float densPopulacional2;
     float pibPerCapita2;
     float superPoder2;
+    
+    int escolha;
+    int sair = 0;  
 
-
-
+ 
     //Lendo dados - Carta 1
     printf("Cadastrando Carta 1: \n");
     printf("Código o estado: ");
@@ -103,51 +105,44 @@ int main() {
     superPoder1 = populacao1 + area1 + pib1 + pontosTuristicos1 + pibPerCapita1 + (1/densPopulacional1);     //Cálculo do Super Poder - carta 1
     superPoder2 = populacao2 + area2 + pib2 + pontosTuristicos2 + pibPerCapita2 + (1/densPopulacional2);     //Cálculo do Super Poder - carta 2
 
-    
-    printf("Comparação de Cartas: \n");                  //Iniciando comparação dos atributos das cartas
-    
-    if(populacao1 > populacao2)
-        printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao2);
-    else  
-         printf("População: Carta 2 venceu (%d)\n", populacao1 > populacao2);
-    
 
-    if(area1 > area2)
-        printf("Área: Carta 1 venceu (%d)\n", area1 > area2);
-    else
-        printf("Área: Carta 2 venceu (%d)\n", area1 > area2);
-    
-
-    if(pib1 > pib2)
-        printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2);
-    else
-        printf("PIB: Carta 2 venceu (%d)\n", pib1 > pib2);
+    printf("Escolha um dos números abaixo para iniciar a comparação: \n");
+    printf("1 - População \n");
+    printf("2 - Área \n");
+    printf("3 - PIB \n");
+    printf("4 - Número de Pontos Turísticos \n");
+    printf("5 - Densidade demográfica \n");
 
 
-    if(pontosTuristicos1 > pontosTuristicos2)
-        printf("Pontos Turísticos: Carta 1 venceu (%d)\n", pontosTuristicos1 > pontosTuristicos2);
-    else
-        printf("Pontos Turísticos: Carta 2 venceu (%d)\n", pontosTuristicos1 > pontosTuristicos2);
-    
+   do{
+        switch (escolha) {
+            case 1:
+                /* code */
+                break;
+            
+            case 3:
+                /* code */
+                break;
+                
+            case 4:
+                /* code */
+                break;
+            
+            case 5:
+                /* code */
+                break;
 
-    if(densPopulacional1 < densPopulacional2)                                                          //Comparação invertida dedivo à propriedade inversa do valor
-        printf("Densidade Populacional: Carta 1 venceu (%d)\n", densPopulacional1 < densPopulacional2);
-    else
-        printf("Densidade Populacional: Carta 2 venceu (%d)\n", densPopulacional1 < densPopulacional2);
+            default:
+                break;
+        }
     
-    
-    if(pibPerCapita1 > pibPerCapita2)
-        printf("PIB per Capita: Carta 1 venceu (%d)\n", pibPerCapita1 > pibPerCapita2);
-    else
-        printf("PIB per Capita: Carta 2 venceu (%d)\n", pibPerCapita1 > pibPerCapita2);
-
-    
-    if(superPoder1 > superPoder2)
-        printf("Super Poder: Carta 1 venceu (%d)\n", superPoder1 > superPoder2);
-    else
-    printf("Super Poder: Carta 2 venceu (%d)\n", superPoder1 > superPoder2);
+    }while (sair){
         
+        /* code */
+    }
     
+
     
     return 0;
+
 }
