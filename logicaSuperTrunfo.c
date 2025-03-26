@@ -133,7 +133,7 @@ int main() {
             
         
         case 2:
-            printf("Duelo: %s  X  %s \n", nomeCidade1, nomeCidade2);
+            printf("Duelo: %s  X  %s \n", nomeCidade1, nomeCidade2); 
             printf("Atributo escolhido: Área \n");
             printf("%s: %.2f \n", nomeCidade1, area1);
             printf("%s: %.2f \n", nomeCidade2, area2);
