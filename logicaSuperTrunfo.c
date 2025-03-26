@@ -36,7 +36,7 @@ int main() {
     float superPoder2;
     
     int escolha;
-    int sair = 0;  
+    
 
  
     //Lendo dados - Carta 1
@@ -113,35 +113,92 @@ int main() {
     printf("4 - Número de Pontos Turísticos \n");
     printf("5 - Densidade demográfica \n");
 
+    scanf("%d", &escolha);   
+                                                                
+    switch (escolha) {                                                     //Implementando menu usando Switch-case
+        case 1:
+            printf("Duelo: %s  X  %s \n", nomeCidade1, nomeCidade2);
+            printf("Atributo escolhido: População \n");
+            printf("%s: %lu \n", nomeCidade1, populacao1);
+            printf("%s: %lu \n", nomeCidade2, populacao2);
 
-   do{
-        switch (escolha) {
-            case 1:
-                /* code */
-                break;
+            if(populacao1 > populacao2)
+                printf("Carta 1 venceu! \n");
+            else
+                if(populacao1 < populacao2)
+                    printf("Carta 2 venceu! \n");
+                else
+                    printf("Empate! \n");
+            break;
             
-            case 3:
-                /* code */
-                break;
-                
-            case 4:
-                /* code */
-                break;
-            
-            case 5:
-                /* code */
-                break;
-
-            default:
-                break;
-        }
-    
-    }while (sair){
         
-        /* code */
-    }
-    
+        case 2:
+            printf("Duelo: %s  X  %s \n", nomeCidade1, nomeCidade2);
+            printf("Atributo escolhido: Área \n");
+            printf("%s: %.2f \n", nomeCidade1, area1);
+            printf("%s: %.2f \n", nomeCidade2, area2);
 
+            if(area1 > area2)
+                printf("Carta 1 venceu! \n");
+            else
+                if(area1 < area2)
+                    printf("Carta 2 venceu! \n");
+                else
+                    printf("Empate! \n");
+            break;
+                
+        case 3:
+            printf("Duelo: %s  X  %s \n", nomeCidade1, nomeCidade2);
+            printf("Atributo escolhido: PIB \n");
+            printf("%s: %.2f \n", nomeCidade1, pib1);
+            printf("%s: %.2f \n", nomeCidade2, pib2);
+
+            if(pib1 > pib2)
+                printf("Carta 1 venceu! \n");
+            else
+                if(pib1 < pib2)
+                    printf("Carta 2 venceu! \n");
+                else
+                    printf("Empate! \n");
+            break;
+            
+        case 4:
+            printf("Duelo: %s  X  %s \n", nomeCidade1, nomeCidade2);
+            printf("Atributo escolhido: Pontos Turísticos \n");
+            printf("%s: %d \n", nomeCidade1, pontosTuristicos1);
+            printf("%s: %d \n", nomeCidade2, pontosTuristicos2);
+
+            if(pontosTuristicos1 > pontosTuristicos2)
+                printf("Carta 1 venceu! \n");
+            else
+                if(pontosTuristicos1 < pontosTuristicos2)
+                    printf("Carta 2 venceu! \n");
+                else
+                    printf("Empate! \n");
+            break;
+
+            
+        case 5:
+            printf("Duelo: %s  X  %s \n", nomeCidade1, nomeCidade2);
+            printf("Atributo escolhido: Densidade Demográfica \n");
+            printf("%s: %.2f \n", nomeCidade1, densPopulacional1);
+            printf("%s: %.2f \n", nomeCidade2, densPopulacional2);
+
+            if(densPopulacional1 < densPopulacional2)       //Neste caso, o menor vence
+                printf("Carta 1 venceu! \n");
+            else
+                if(densPopulacional1 > densPopulacional2)
+                    printf("Carta 2 venceu! \n");
+                else
+                    printf("Empate! \n");
+            break;
+
+        default:
+            printf("Opção Inválida! \n");
+            break;
+        }
+
+    
     
     return 0;
 
